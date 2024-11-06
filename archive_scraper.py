@@ -10,17 +10,20 @@ def fetch_articles():
     articles_found = set()
 
     try:
-        while offset < 2000000:  # Prevents fetching more than 2000 articles.
+        while offset < 2000000:
             response = requests.get(base_url.format(offset), timeout=10)
             response.raise_for_status()  # Raise HTTP errors if any
             soup = BeautifulSoup(response.text, "html.parser")
 
             current_page_articles = 0
             for a in soup.find_all("a"):
-                if 'title' in a.attrs and (a['title'] == 'read fulltext microfilm' or a['title'] == 'fulltext access') and 'href' in a.attrs:
-                    url = a['href']
-                    if url not in articles_found:
-                        articles_found.add(url)
+                if 'title' in a.attrs and 'href' in a.attrs:
+                    if (a['title'] == 'read fulltext microfilm' or a['title'] == 'fulltext access'):
+                        url = a['href']
+                        if url not in articles_found:
+                            articles_found.add(url)
+                            current_page_articles += 1
+                    elif a['title'] == 'fulltext PDF download':
                         current_page_articles += 1
 
             if current_page_articles == 0:
@@ -113,11 +116,6 @@ article_urls = fetch_articles()
 if article_urls:
     article_map = fetch_full_text(article_urls)
     update_value(article_map)
-
-    # Print only a sample of the data to avoid too much output
-    for key, value in list(article_map.items())[:5]:  # Sample first 5 entries
-        print(f"Identifier: {key}")
-        print(f"Text: {value[:200]}...")  # Truncate text output
 
     with open("data.json", "w") as f:
         json.dump(article_map, f, indent=2)

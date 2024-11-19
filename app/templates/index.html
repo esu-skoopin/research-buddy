@@ -11,7 +11,7 @@
 			<div class="flex-item">
 				<div class="space-y-2.5">
 					<p>Enter the URL for the <a href="https://arxiv.org/">arXiv</a> paper you'd like a summary of</p>
-					<form id="form">
+					<form id="form" action="{{url_for('summarize')}}" method="post">
 						<div class="flex rounded-lg shadow-sm">
 							<label for="url" class="sr-only">URL</label>
 							<input

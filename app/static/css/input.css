@@ -1,0 +1,7 @@
+/* Run the following command to compile this file:
+   npx tailwindcss -i ./app/static/css/input.css -o ./app/static/css/output.css --watch
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

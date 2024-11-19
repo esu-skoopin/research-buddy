@@ -7,6 +7,39 @@
         <title>AI Paper Summarizer</title>
     </head>
     <body>
-		
+		<div class="flex min-h-[565px] justify-center flex-wrap">
+			<div class="flex-item">
+				<div class="space-y-2.5">
+					<p>Enter the URL for the <a href="https://arxiv.org/">arXiv</a> paper you'd like a summary of</p>
+					<form id="form">
+						<div class="flex rounded-lg shadow-sm">
+							<label for="url" class="sr-only">URL</label>
+							<input
+								type="text"
+								id="url"
+								name="url"
+								class="py-3 px-4 block w-full shadow-sm rounded-s-lg text-sm focus:z-10"
+							/>
+							<button type="submit" class="w-[2.875rem] h-[2.875rem] shrink-0 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md">
+								<svg
+									class="w-5 h-5"
+									aria-hidden="true"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 512 512"
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="32"
+								>
+									<path d="M112 352l-64-64 64-64" />
+									<path d="M64 288h294c58.76 0 106-49.33 106-108v-20" />
+								</svg>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
     </body>
 </html>

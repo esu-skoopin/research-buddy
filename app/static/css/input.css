@@ -1,0 +1,49 @@
+/* Run the following command to compile this file:
+   npx tailwindcss -i ./app/static/css/input.css -o ./app/static/css/output.css --watch
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-gray-300 mt-10;
+    }
+    button {
+        @apply bg-gray-700 text-white border border-gray-700;
+    }
+    button:hover {
+        @apply bg-gray-800;
+    }
+    button:focus {
+        @apply bg-gray-800 outline-none;
+    }
+    input {
+        @apply border border-gray-200;
+    }
+    input:focus {
+        @apply border-gray-600 ring-gray-600 outline-none;
+    }
+    a {
+        @apply text-slate-600;
+    }
+    /* a:hover {
+        @apply text-[#374252];
+    } */
+    footer a {
+        @apply text-black underline;
+    }
+    footer a:hover {
+        @apply font-bold;
+    }
+}
+
+@layer components {
+	.flex-item {
+		@apply flex flex-col w-3/5 min-w-[440px] max-w-[864px] space-y-8;
+	}
+	#summary-block {
+		@apply invisible;
+	}
+}

@@ -1,0 +1,16 @@
+# Create and activate your virtual environment
+# Then install dependencies with pip install -r requirements.txt
+
+flask~=3.0.3
+torch~=2.5.1
+tensorflow
+transformers~=4.46.1
+tf-keras
+requests~=2.32.3
+beautifulsoup4
+aiohttp
+asyncio
+datasets~=3.1.0
+# gunicorn    Optional: For production server if deploying
+
+tqdm~=4.66.6

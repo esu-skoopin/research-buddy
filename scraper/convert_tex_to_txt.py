@@ -1,7 +1,6 @@
 import os
 import subprocess
 from tqdm import tqdm
-import time
 
 # Base directory where your extracted files are located
 BASE_DIR = "/Users/iamsergio/Desktop/arxiv/text/2307"  # Update this to the full path

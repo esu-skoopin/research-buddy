@@ -4,7 +4,7 @@ file_name = "summarization_data_{}.jsonl"
 
 def merge_JsonFiles(filename):
     result = []
-    for i in range(1, 9):
+    for i in range(1, 5):
         curr = file_name.format(i)
         print(f"Processing file: {curr}")
         with open(curr, 'r') as infile:

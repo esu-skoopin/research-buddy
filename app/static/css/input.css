@@ -43,7 +43,4 @@
 	.flex-item {
 		@apply flex flex-col w-3/5 min-w-[440px] max-w-[864px] space-y-8;
 	}
-	#summary-block {
-		@apply invisible;
-	}
 }

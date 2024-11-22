@@ -3,9 +3,7 @@
 
 flask
 torch
-tensorflow
 transformers
-tf-keras
 requests
 beautifulsoup4
 aiohttp

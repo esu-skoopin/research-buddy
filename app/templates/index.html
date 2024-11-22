@@ -15,7 +15,7 @@
 			<div class="flex-item">
 				<div class="space-y-2.5">
 					<p>Enter the URL for the <a href="https://arxiv.org/">arXiv</a> paper you'd like a summary of</p>
-					<form id="form" action="{{url_for('summarize')}}" method="post">
+					<form id="form">
 						<div class="flex rounded-lg shadow-sm">
 							<label for="url" class="sr-only">URL</label>
 							<input
@@ -41,7 +41,42 @@
 								</svg>
 							</button>
 						</div>
+						<p id="error" class="text-sm italic mt-1.5"></p>
 					</form>
+				</div>
+				<div id="summary-block" class="hidden space-y-2.5">
+					<p>Summary</p>
+					<div class="bg-white border border-gray-200 shadow-sm rounded-xl">
+						<div class="flex bg-gray-100 border-b rounded-t-xl py-[9px] px-4 md:py-[9px] md:px-5 justify-end">
+							<button type="button" id="copy-button" title="Copy" class="p-[5px] inline-flex items-center rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50">
+								<svg
+									class="w-5 h-5"
+									aria-hidden="true"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+								>
+									<path d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+								</svg>
+							</button>
+						</div>
+						<div class="h-[280px] text-sm overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 p-4 md:p-5">
+							<div id="spinner" class="flex h-full justify-center items-center">
+								<div
+									class="animate-spin inline-block size-8 border-[3px] border-current border-t-transparent text-blue-600 rounded-full"
+									role="status"
+									aria-label="loading"
+								>
+									<span class="sr-only">Loading...</span>
+								</div>
+							</div>
+							<p id="summary" class="hidden"></p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -52,5 +87,6 @@
 			</p>
 		</footer>
 		<script src="https://cdn.jsdelivr.net/npm/preline@2.5.1/dist/preline.js"></script>
+		<script src="{{url_for('static',filename='js/index.js')}}"></script>
     </body>
 </html>

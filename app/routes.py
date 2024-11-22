@@ -4,6 +4,7 @@ from flask import render_template, request, jsonify
 # Pretrained model-related imports
 from model.model_loader import load_model
 from scraper.url_scraper import fetch_url_text
+from app.utils.summarizer import summarize_text_from_url
 
 @app.route('/')
 def index():
@@ -13,18 +14,17 @@ def index():
 @app.route('/summarize', methods=['POST'])
 def summarize():
     # Grab the URL inputted by the user
-    data = request.form
-    url = data["url"]
+    url = request.json.get('url')
 
+	# Validate URL
     if not url:
-        return jsonify({"error": "URL is required"}), 400
+        return jsonify({'error': 'URL is required'}), 400
 
     # Users will be told to provide either the PDF link or the full-text link of the arXiv article.
     # Then using our scraper method, we will grab the text-content, if any.
-    text_content = fetch_url_text(url)
+    summary = summarize_text_from_url(url)
 
-    if text_content == 'No text content available.':
-        return jsonify({"error": 'No text content available'}), 500
-
-    # For testing, I will only print out 800 characters
-    return jsonify({"summary": text_content[:800]}), 200
+    if summary == 'Summarization is only supported for papers available in HTML or PDF file formats at the moment':
+        return jsonify({'error': summary}), 500
+	
+    return jsonify({'summary': summary}), 200

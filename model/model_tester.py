@@ -3,7 +3,7 @@ import torch
 from transformers import LEDTokenizer, LEDForConditionalGeneration
 
 # Paths
-JSON_FILE = "../data/summarization_data.json"
+JSON_FILE = "../data/summarization_data_2.json"
 PRETRAINED_MODEL_DIR = "allenai/led-base-16384"
 FINETUNED_MODEL_DIR = "./led-finetuned"
 

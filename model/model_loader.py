@@ -2,7 +2,7 @@ from transformers import LEDTokenizer, LEDForConditionalGeneration
 import torch
 
 def load_model(model_dir):
-    tokenizer = LEDTokenizer.from_pretrained(model_dir)
+    tokenizer = LEDTokenizer.from_pretrained("allenai/led-base-16384")
     model = LEDForConditionalGeneration.from_pretrained(model_dir)
 
     # Choose the appropriate device

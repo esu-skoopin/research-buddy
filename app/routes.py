@@ -14,8 +14,7 @@ def index():
 @app.route('/summarize', methods=['POST'])
 def summarize():
     try:
-        data = request.form
-        url = data.get("url", "").strip()
+        url = request.json.get('url')
 
         if not url:
             return jsonify({"error": "URL is required"}), 400
@@ -32,9 +31,10 @@ def summarize():
             truncation=True
         ).to(device)
 
+        model.eval()
         with torch.no_grad():
             outputs = model.generate(
-                inputs["input_ids"],
+                **inputs,
                 max_length=768,
                 num_beams=4,
                 early_stopping=True

@@ -1,6 +1,9 @@
 import os
 import glob
 import tarfile
+
+import pymupdf
+import pymupdf4llm
 import requests
 import shutil
 import gzip
@@ -76,14 +79,15 @@ def convert_tex_to_txt(tex_file, output_dir="./converted_text"):
                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                 text=True, timeout=15)
         if result.returncode == 0:
-            # Save the converted text to a file
+            # Remove newlines and save the converted text to a file
+            cleaned_text = result.stdout.replace("\n", " ").strip()
             with open(output_text_file, "w", encoding="utf-8") as f:
-                f.write(result.stdout)
+                f.write(cleaned_text)
 
             print(f"Converted: {tex_file} to {output_text_file}")
 
-            # Return the text content directly
-            return result.stdout.strip()
+            # Return the cleaned text content directly
+            return cleaned_text
         else:
             return f"Error during conversion: {result.stderr}"
     except subprocess.TimeoutExpired:
@@ -94,7 +98,9 @@ def fetch_pdf_text(pdf_url):
     """
     Dummy method for PDF parsing (to be implemented using PyPDF2 or pdfplumber).
     """
-    return f"PDF scraping is not implemented yet. URL: {pdf_url}"
+    paper_raw = requests.get(pdf_url).content  # Gets the raw bytes that make up the paper
+    doc = pymupdf.open(stream=paper_raw, filetype='pdf')  # Interprets the paper as a PDF
+    return pymupdf4llm.to_markdown(doc)  # Returns the paper in Markdown format
 
 
 def fetch_url_text(url, output_dir="./tex_files"):
@@ -113,7 +119,7 @@ def fetch_url_text(url, output_dir="./tex_files"):
                 if text_content and "Error" not in text_content:
                     return text_content
 
-                    # Handle arXiv PDF URL
+        # Handle arXiv PDF URL
         if "arxiv.org/abs/" in url:
             pdf_url = url.replace("abs", "pdf") + ".pdf"
             return fetch_pdf_text(pdf_url)

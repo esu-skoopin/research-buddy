@@ -9,6 +9,8 @@ The Scholarly Article AI Summarizer is a web application that provides concise a
 ### Diagram: 
 <img width="1216" alt="Screenshot 2024-11-29 at 3 54 59 PM" src="https://github.com/user-attachments/assets/bc183e47-b342-4878-8c6f-42a8e608ad3c">
 
+### Documentation:
+[Scholarly Article AI Summarizer](https://github.com/user-attachments/files/17963556/Scholarly.Article.AI.Summarizer.5.pdf)
 
 ## Features
 

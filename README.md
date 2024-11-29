@@ -72,7 +72,7 @@ amplitudes."
 ### Old Output
 ```json
 {
-  "summary": beta \left( \frac{\beta2}{\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
+  "summary": "beta \left( \frac{\beta2}{\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
 \gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
 \gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
 \gamma2}-\gamma2}-\gamma2}-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
@@ -82,6 +82,6 @@ amplitudes."
 \gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
 \gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
 \gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
-\
+\"
 }
 ```

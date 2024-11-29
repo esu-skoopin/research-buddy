@@ -98,3 +98,7 @@ amplitudes."
 - Dataset Expansion: Increase the size and diversity of the training dataset for more robust fine-tuning across disciplines.
 - Article Recommendation System: Develop a recommendation feature to suggest related articles, helping researchers save time and explore relevant content efficiently.
 - Interactive Chat Feature: Enable a "Chat with your article" functionality, allowing users to query specific sections of their research papers interactively.
+
+## Flask Application:
+<img width="1512" alt="Screenshot 2024-11-29 at 1 29 39 PM" src="https://github.com/user-attachments/assets/b7223fca-6724-4cdc-8111-c04a9cf61ccd">
+<img width="1512" alt="Screenshot 2024-11-29 at 3 08 36 PM" src="https://github.com/user-attachments/assets/46742bea-1de7-4a98-bd34-0001646c87c1">

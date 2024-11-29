@@ -5,7 +5,7 @@ import json
 from tqdm import tqdm
 
 # Base directory where your extracted files are located
-BASE_DIR = "/Users/iamsergio/Desktop/arxiv/text/2302"  # Update this to the full path
+BASE_DIR = "/Users/iamsergio/Desktop/arxiv/text/2305"  # Update this to the full path
 
 # Path to the final JSON file
 OUTPUT_JSON_PATH = os.path.join(BASE_DIR, "converted_data.json")

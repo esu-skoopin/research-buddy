@@ -85,3 +85,16 @@ amplitudes."
 \"
 }
 ```
+
+## Results and Metrics
+
+### ROUGE Scores:
+- **Pre-trained Model:** ROUGE-1: 0.1138, ROUGE-2: 0.0241, ROUGE-L: 0.0653
+- **Fine-tuned Model:** ROUGE-1: 0.3232, ROUGE-2: 0.1126, ROUGE-L: 0.2115
+
+**Improvement: ~250%**
+
+### Future Enhancements:
+- Dataset Expansion: Increase the size and diversity of the training dataset for more robust fine-tuning across disciplines.
+- Article Recommendation System: Develop a recommendation feature to suggest related articles, helping researchers save time and explore relevant content efficiently.
+- Interactive Chat Feature: Enable a "Chat with your article" functionality, allowing users to query specific sections of their research papers interactively.

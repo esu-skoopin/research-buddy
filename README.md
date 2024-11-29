@@ -25,13 +25,16 @@ The Scholarly Article AI Summarizer is a web application that provides concise a
 - **Pandoc**: Conversion of LaTeX content to plain text.
 - **TQDM**: Monitoring pipeline progress.
 
-### Backend
-- **Flask**: API for summarization.
-- **BeautifulSoup**: Parsing HTML content from arXiv (if needed).
-
 ### Frontend
-- **HTML/CSS**: Web interface for API usage.
-- **MathJax**: Rendering LaTeX equations in the browser.
+- **HTML/CSS:** For structuring and styling the web pages.
+- **Tailwind CSS:** A utility-first CSS framework for styling the frontend.
+- **JavaScript:** For client-side scripting.
+- **MathJax:** For rendering LaTeX equations in the browser.
+
+### Backend
+- **Flask:** A lightweight Python web framework for building the backend API.
+- **Python:** The primary programming language used for backend logic and model handling.
+- **Requests:** For making HTTP requests to fetch content from URLs.
 
 ## Why It Is Helpful
 
@@ -45,8 +48,40 @@ The Scholarly Article AI Summarizer is a web application that provides concise a
 ### Input
 [https://arxiv.org/abs/2301.00001](https://arxiv.org/abs/2301.00001)
 
-### Output
+### New Output
 ```json
 {
-  "summary": "We propose a Time-Orbiting Potential (TOP) trap for direct loading from an atom chip. This design facilitates... [truncated for brevity]"
+  "summary": "We propose a Time-Orbiting Potential (TOP) trap for direct loading from an
+atom chip. This trap can be produced by a single magnetic moment or by a single magnetic
+moment. The trap can be made as small or large as desired simply by adjusting the chip
+size and current amplitudes. The trap can be made as small or large as desired simply by
+adjusting the chip size and current amplitudes. The trap can be made as small or large as
+desired simply by adjusting the chip size and current amplitudes. The trap can be made
+as small or large as desired simply by adjusting the chip size and current amplitudes. The
+trap can be made as small or large as desired simply by adjusting the chip size and current
+amplitudes. The trap can be made as small or large as desired simply by adjusting the chip
+size and current amplitudes. The trap can be made as small or large as desired simply by
+adjusting the chip size and current amplitudes. The trap can be made as small or large as
+desired simply by adjusting the chip size and current amplitudes. The trap can be made
+as small or large as desired simply by adjusting the chip size and current amplitudes. The
+trap can be made as large or large as desired simply by adjusting the chip size and current
+amplitudes."
 }
+```
+
+### Old Output
+```json
+{
+  "summary": "beta \left( \frac{\beta2}{\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
+\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
+\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
+\gamma2}-\gamma2}-\gamma2}-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
+\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
+\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
+21
+\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
+\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
+\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-\gamma2-
+\"
+}
+```

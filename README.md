@@ -6,6 +6,12 @@ An AI-powered summarization tool designed to streamline the analysis of scholarl
 
 The Scholarly Article AI Summarizer is a web application that provides concise and accurate summaries of academic papers hosted on arXiv. This tool leverages advanced natural language processing (NLP) techniques and a fine-tuned transformer model to generate summaries, making it easier for researchers, students, and professionals to quickly grasp the key points of lengthy and complex research papers.
 
+### Diagram: 
+<img width="1216" alt="Screenshot 2024-11-29 at 3 54 59 PM" src="https://github.com/user-attachments/assets/bc183e47-b342-4878-8c6f-42a8e608ad3c">
+
+### Documentation:
+[Scholarly Article AI Summarizer](https://github.com/user-attachments/files/17963556/Scholarly.Article.AI.Summarizer.5.pdf)
+
 ## Features
 
 - **AI-Powered Summarization**: Fine-tuned LED model for high-quality, domain-specific summaries of academic papers.

@@ -3,25 +3,22 @@ node_modules/
 
 # Environment variables
 .env
+.venv/
 
 # Python cache
 __pycache__/
-*.pyc
 
 # IDE settings
 .idea/
-*.iml
 
-# OS generated files
+# OS-generated files
 .DS_Store
-
-# Log files
-logs/
-
-results/
-*.log
 
 # Tailwind CSS output
 app/static/css/output.css
 
-led-finetuned/
+# Testing and log files
+converted_text/
+data/converted_data.json
+model/logs/
+tex_files/

@@ -10,9 +10,6 @@ with open(JSON_FILE, 'r') as f:
 texts = [item['full_text'] for item in data]
 summaries = [item['abstract'] for item in data]
 
-texts = texts[:300]
-summaries = summaries[:300]
-
 dataset = Dataset.from_dict({"text": texts, "summary": summaries})
 
 train_test_split = dataset.train_test_split(test_size=0.2)

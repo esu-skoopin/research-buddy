@@ -7,14 +7,9 @@ import torch
 # Use the model, tokenizer, and device loaded in __init__.py
 from app import model, tokenizer, device
 
-# Define the pretrained model directory
-PRETRAINED_MODEL_DIR = "allenai/led-base-16384"
-pretrained_model = LEDForConditionalGeneration.from_pretrained(PRETRAINED_MODEL_DIR).to(device)
-
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/summarize', methods=['POST'])
 def summarize():
@@ -48,26 +43,12 @@ def summarize():
                 num_beams=4,
                 early_stopping=True
             )
-
-        # Generate the summary using the pretrained model for comparison
-        pretrained_model.eval()
-        with torch.no_grad():
-            pretrained_outputs = pretrained_model.generate(
-                **inputs,
-                max_length=512,
-                num_beams=4,
-                early_stopping=True
-            )
-
+		
         # Decode the generated summaries
         summary = tokenizer.decode(outputs[0], skip_special_tokens=True)
-        pretrained_summary = tokenizer.decode(pretrained_outputs[0], skip_special_tokens=True)
-
+		
         # Return the summaries
-        return jsonify({
-            "summary": summary,
-            "pretrained_summary": pretrained_summary
-        }), 200
+        return jsonify({"summary": summary}), 200
 
     except Exception as e:
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500

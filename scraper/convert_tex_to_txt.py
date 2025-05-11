@@ -16,7 +16,13 @@ abstract_pattern = re.compile(
 )
 
 def find_main_tex_file(directory):
+    main_file_candidates = ["main.tex", "index.tex"]
     for root, _, files in os.walk(directory):
+        # Check for prioritized filenames
+        for file in files:
+            if file in main_file_candidates:
+                return os.path.join(root, file)
+        # If no prioritized file is found, return the first .tex file
         for file in files:
             if file.endswith(".tex"):
                 return os.path.join(root, file)

@@ -3,13 +3,14 @@
 An AI-powered summarization tool designed to streamline the analysis of scholarly articles. This project leverages the Longformer Encoder-Decoder (LED) model to provide concise, context-rich summaries of academic research papers hosted on arXiv.
 
 ## Table of Contents
-- [Project Overview](https://github.com/esu-skoopin/research-buddy/edit/main/README.md#project-overview)
-- [Features](https://github.com/esu-skoopin/research-buddy/edit/main/README.md#features)
-- [Technologies Used](https://github.com/esu-skoopin/research-buddy/edit/main/README.md#technologies-used)
-- [Benefits of Using ResearchBuddy](https://github.com/esu-skoopin/research-buddy/edit/main/README.md#benefits-of-using-researchbuddy)
-- [How to Set Up Project](https://github.com/esu-skoopin/research-buddy/edit/main/README.md#how-to-set-up-project)
-- [Example Summary](https://github.com/esu-skoopin/research-buddy/edit/main/README.md#benefits-of-using-researchbuddy)
-- [App Preview](https://github.com/esu-skoopin/research-buddy/edit/main/README.md#app-preview)
+- [Project Overview](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#project-overview)
+- [Features](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#features)
+- [Technologies Used](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#technologies-used)
+- [Benefits of Using ResearchBuddy](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#benefits-of-using-researchbuddy)
+- [How to Set Up Project](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#how-to-set-up-project)
+- [Example Summary](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#example-summary)
+- [Results and Metrics](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#results-and-metrics)
+- [App Preview](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#app-preview)
 
 ## Project Overview
 
@@ -97,10 +98,9 @@ ResearchBuddy is a web application that provides concise and accurate summaries 
 
 ## Example Summary
 
-### Input
-[https://arxiv.org/pdf/2301.00001](https://arxiv.org/pdf/2301.00001)
+Input: [https://arxiv.org/pdf/2301.00001](https://arxiv.org/pdf/2301.00001)
 
-### Output Generated Using Pre-Trained Model
+Output generated using pre-trained model:
 ```
 beta \left( \frac{\beta2}{\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
 \gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
@@ -114,7 +114,7 @@ beta \left( \frac{\beta2}{\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-\gamma2}-
 \gamma2
 ```
 
-### Output Generated Using Fine-Tuned Model
+Output generated using fine-tuned model:
 ```
 We propose a Time-Orbiting Potential (TOP) trap for direct loading from an atom chip.
 This trap can be produced by a single magnetic moment or by a single magnetic moment.

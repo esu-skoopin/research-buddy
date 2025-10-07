@@ -3,14 +3,14 @@
 An AI-powered summarization tool designed to streamline the analysis of scholarly articles. This project leverages the Longformer Encoder-Decoder (LED) model to provide concise, context-rich summaries of academic research papers hosted on arXiv.
 
 ## Table of Contents
-- [Project Overview](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#project-overview)
-- [Features](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#features)
-- [Technologies Used](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#technologies-used)
-- [Benefits of Using ResearchBuddy](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#benefits-of-using-researchbuddy)
-- [How to Set Up Project](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#how-to-set-up-project)
-- [Example Summary](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#example-summary)
-- [Results and Metrics](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#results-and-metrics)
-- [App Preview](https://github.com/esu-skoopin/research-buddy?tab=readme-ov-file#app-preview)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Benefits of Using ResearchBuddy](#benefits-of-using-researchbuddy)
+- [How to Set Up Project](#how-to-set-up-project)
+- [Example Summary](#example-summary)
+- [Results and Metrics](#results-and-metrics)
+- [App Preview](#app-preview)
 
 ## Project Overview
 

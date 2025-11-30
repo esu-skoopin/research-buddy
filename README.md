@@ -17,7 +17,7 @@ An AI-powered summarization tool designed to streamline the analysis of scholarl
 ResearchBuddy is a web application that provides concise and accurate summaries of academic papers hosted on arXiv. This tool leverages advanced natural language processing (NLP) techniques and a fine-tuned transformer model to generate summaries, making it easier for researchers, students and professionals to quickly grasp the key points of lengthy and complex research papers.
 
 ### Diagram
-<img width="1216" alt="Screenshot 2024-11-29 at 3 54 59 PM" src="https://github.com/user-attachments/assets/bc183e47-b342-4878-8c6f-42a8e608ad3c">
+<img width="1279" height="494" alt="researchbuddy-sdd (cropped)" src="https://github.com/user-attachments/assets/c72521ea-5810-4ca7-9016-de8150eaa911" />
 
 ### Documentation
 [[Download an in-depth paper of the implementation behind ResearchBuddy]](https://github.com/user-attachments/files/17963556/Scholarly.Article.AI.Summarizer.5.pdf)
@@ -142,5 +142,5 @@ chip size and current amplitudes.
 Improvement: ~250%
 
 ## App Preview
-<img width="1512" alt="Screenshot 2024-11-29 at 1 29 39 PM" src="https://github.com/user-attachments/assets/b7223fca-6724-4cdc-8111-c04a9cf61ccd">
-<img width="1512" alt="Screenshot 2024-11-29 at 3 08 36 PM" src="https://github.com/user-attachments/assets/46742bea-1de7-4a98-bd34-0001646c87c1">
+<img width="998" height="578" alt="app-preview-1 (cropped)" src="https://github.com/user-attachments/assets/893e3b09-b35a-447c-b97f-386c984aaf8e" />
+<img width="998" height="588" alt="app-preview-2 (cropped)" src="https://github.com/user-attachments/assets/47fea084-dedf-4401-a80e-0176f076315c" />
